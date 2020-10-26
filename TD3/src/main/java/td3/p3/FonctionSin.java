@@ -10,13 +10,15 @@ public class FonctionSin implements ExpressionSymbolique{
 		this.x= x ;
 	}
 	@Override
-	public double calculer() {
+	public String calculer1() {
+	
 		
-		return Math.sin(this.x.calculer());
+		double tt=  Math.sin(Double.parseDouble(this.x.calculer1()));
+		return  Double.toString(tt) ;
 	}
 
 	@Override
-	public ExpressionSymbolique simplifier() {
+	public ExpressionSymbolique simplifie() {
 		
 		return null;
 	}
@@ -25,6 +27,11 @@ public class FonctionSin implements ExpressionSymbolique{
 	public String afficher() {
 		
 		return "sin("+this.x.afficher()+")";
+	}
+	@Override
+	public double calculer() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

@@ -11,7 +11,7 @@ public class RacineCarree implements ExpressionSymbolique {
 
 	
 	@Override
-	public ExpressionSymbolique simplifier() {
+	public ExpressionSymbolique simplifie() {
 		
 		return null;
 	}
@@ -23,12 +23,21 @@ public class RacineCarree implements ExpressionSymbolique {
 	}
 
 	@Override
-	public double calculer() {
-		
-		return Math.sqrt(this.x.calculer());
-		
+	public String calculer1() {
+			
+		double tt=  Math.sqrt(Double.parseDouble(this.x.calculer1()));
+		return  Double.toString(tt) ;
 		
 	}
+
+
+	@Override
+	public double calculer() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
 
 
 }

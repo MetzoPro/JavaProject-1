@@ -4,11 +4,12 @@ import td3.ExpressionArithmetique;
 
 public interface ExpressionSymbolique extends ExpressionArithmetique{
 	
-		
-	 public ExpressionSymbolique simplifier();
+
+	 public ExpressionSymbolique simplifie();
 	 public String afficher();
-	 public double calculer();
+	 String calculer1();
 	 
+	
 	 
 		
 		

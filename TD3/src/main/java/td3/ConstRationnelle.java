@@ -1,6 +1,9 @@
 package td3;
 
-public final class ConstRationnelle implements ExpressionArithmetique {
+import td3.p3.ExpressionSymbolique;
+import td3.p3.VariablesSymbolique;
+
+public final class ConstRationnelle implements ExpressionArithmetique  {
 
 	@Override
 	public String toString() {
@@ -11,6 +14,7 @@ public final class ConstRationnelle implements ExpressionArithmetique {
 		this.numerateur = num;
 		this.denominateur = denom;
 	}
+
 
 	public int getNumerateur() {
 		return numerateur;
@@ -23,8 +27,8 @@ public final class ConstRationnelle implements ExpressionArithmetique {
 	private final int numerateur;
 	private final int denominateur;
 
-	@Override
-	public ExpressionArithmetique simplifier() {
+	@Override	
+	public ExpressionArithmetique simplifie() {
 		int pgcd = gcd(this.numerateur, this.denominateur);
 		return new ConstRationnelle(this.numerateur / pgcd, this.denominateur / pgcd);
 	}
@@ -38,13 +42,18 @@ public final class ConstRationnelle implements ExpressionArithmetique {
 
 	@Override
 	public double calculer() {
-		return 0.0;
+		
+		return this.getNumerateur() / this.getDenominateur() ;
 	}
 
+	
 	@Override
 	public String afficher() {
-		
-		return null;
+		// TODO Auto-generated method stub
+		return this.getNumerateur()+ "/" + this.getDenominateur() ;
 	}
+
+
+
 
 }

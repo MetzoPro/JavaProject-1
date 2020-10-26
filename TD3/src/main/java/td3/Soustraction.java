@@ -15,31 +15,37 @@ public class Soustraction extends OperationBinaire {
 	@Override
 	protected ExpressionArithmetique simplifie(ConstRationnelle gauche, ConstEntiere droite) {
 		return new ConstRationnelle(gauche.getNumerateur() * droite.getEntier() - gauche.getDenominateur() * 1,
-				1 * gauche.getDenominateur()).simplifier();
+				1 * gauche.getDenominateur()).simplifie();
 	}
 
 	@Override
 	protected ExpressionArithmetique simplifie(ConstRationnelle gauche, ConstRationnelle droite) {
 		return new ConstRationnelle(
 				gauche.getNumerateur() * droite.getDenominateur() - gauche.getDenominateur() * droite.getNumerateur(),
-				droite.getDenominateur() * gauche.getDenominateur()).simplifier();
+				droite.getDenominateur() * gauche.getDenominateur()).simplifie();
 	}
 
 	@Override
 	protected ExpressionArithmetique simplifie(ConstEntiere gauche, ConstEntiere droite) {
-		return new ConstEntiere(gauche.getEntier() - droite.getEntier()).simplifier();
+		return new ConstEntiere(gauche.getEntier() - droite.getEntier()).simplifie();
 	}
 
 	@Override
 	protected ExpressionArithmetique simplifie(ConstEntiere gauche, ConstRationnelle droite) {
 		return new ConstRationnelle(droite.getDenominateur() * gauche.getEntier() - droite.getNumerateur() * 1,
-				1 * droite.getDenominateur()).simplifier();
+				1 * droite.getDenominateur()).simplifie();
 	}
 
 	@Override
 	public String afficher() {
 		return this.eaLeft.afficher() + " - " +this.eaRight.afficher();
 		
+	}
+
+	@Override
+	public String calculer1() {
+		// TODO Auto-generated method stub
+		return null;
 	} 
 
 }

@@ -13,7 +13,7 @@ public final class ConstEntiere implements ExpressionArithmetique {
 	private final int entier;
 
 	@Override
-	public ExpressionArithmetique simplifier() {
+	public ExpressionArithmetique simplifie() {
 		return this;
 	}
 

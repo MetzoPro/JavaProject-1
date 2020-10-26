@@ -14,23 +14,23 @@ public class Division extends OperationBinaire {
 
 	@Override
 	protected ExpressionArithmetique simplifie(ConstRationnelle gauche, ConstEntiere droite) {
-		return new ConstRationnelle(gauche.getNumerateur(), gauche.getDenominateur() * droite.getEntier()).simplifier();
+		return new ConstRationnelle(gauche.getNumerateur(), gauche.getDenominateur() * droite.getEntier()).simplifie();
 	}
 
 	@Override
 	protected ExpressionArithmetique simplifie(ConstEntiere gauche, ConstRationnelle droite) {
-		return new ConstRationnelle(gauche.getEntier() * droite.getNumerateur(), droite.getDenominateur()).simplifier();
+		return new ConstRationnelle(gauche.getEntier() * droite.getNumerateur(), droite.getDenominateur()).simplifie();
 	}
 
 	@Override
 	protected ExpressionArithmetique simplifie(ConstRationnelle gauche, ConstRationnelle droite) {
 		return new ConstRationnelle(gauche.getNumerateur() * droite.getDenominateur(),
-				gauche.getDenominateur() * droite.getNumerateur()).simplifier();
+				gauche.getDenominateur() * droite.getNumerateur()).simplifie();
 	}
 
 	@Override
 	protected ExpressionArithmetique simplifie(ConstEntiere gauche, ConstEntiere droite) {
-		return new ConstRationnelle(gauche.getEntier(), droite.getEntier()).simplifier();
+		return new ConstRationnelle(gauche.getEntier(), droite.getEntier()).simplifie();
 	}
 
 	@Override
@@ -42,6 +42,12 @@ public class Division extends OperationBinaire {
 	public String afficher() {
 		return this.eaLeft.afficher() + " / " + this.eaRight.afficher();
 		
+	}
+
+	@Override
+	public String calculer1() {
+		// TODO Auto-generated method stub
+		return null;
 	} 
 
 }

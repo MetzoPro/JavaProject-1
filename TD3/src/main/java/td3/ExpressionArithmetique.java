@@ -1,7 +1,7 @@
 package td3;
 
 public interface ExpressionArithmetique {
-	public ExpressionArithmetique simplifier();
+	public ExpressionArithmetique simplifie();
 	public double calculer();
-	String afficher();
+	public String afficher();
 }

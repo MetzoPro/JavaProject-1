@@ -24,7 +24,7 @@ public class AppTest {
 		ConstEntiere deux = new ConstEntiere(2);
 		Addition racine = new Addition(neuf, deux);
 
-		assertEquals(11, ((ConstEntiere) racine.simplifier()).getEntier());
+		assertEquals(11, ((ConstEntiere) racine.simplifie()).getEntier());
 
 	}
 
@@ -42,8 +42,8 @@ public class AppTest {
 
 		
 
-		assertEquals(550, ((ConstRationnelle) times.simplifier()).getNumerateur());
-		assertEquals(17, ((ConstRationnelle) times.simplifier()).getDenominateur());
+		assertEquals(550, ((ConstRationnelle) times.simplifie()).getNumerateur());
+		assertEquals(17, ((ConstRationnelle) times.simplifie()).getDenominateur());
 
 	}
 	

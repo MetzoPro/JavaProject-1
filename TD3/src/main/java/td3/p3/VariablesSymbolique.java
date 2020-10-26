@@ -8,9 +8,9 @@ public  class VariablesSymbolique implements ExpressionSymbolique {
 		this.value = value;
 	}
 	
-	@Override
-	public ExpressionSymbolique simplifier() {
-		// TODO Auto-generated method stub
+	
+	public ExpressionSymbolique simplifie() {
+	
 		return null;
 	}
 
@@ -20,10 +20,19 @@ public  class VariablesSymbolique implements ExpressionSymbolique {
 	}
 
 	@Override
+	public String calculer1() {
+		// TODO Auto-generated method stub
+		return this.value;
+	}
+
+
+	@Override
 	public double calculer() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	
 
 
 	

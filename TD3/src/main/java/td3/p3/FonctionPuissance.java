@@ -11,7 +11,7 @@ public class FonctionPuissance implements ExpressionSymbolique{
 	}
 
 	@Override
-	public ExpressionSymbolique simplifier() {
+	public ExpressionSymbolique simplifie() {
 		
 		return null;
 	}
@@ -25,8 +25,18 @@ public class FonctionPuissance implements ExpressionSymbolique{
 
 		
 	@Override
+	public String calculer1() {
+	
+		
+		double tt=  Math.pow(Double.parseDouble(this.x.calculer1()),Double.parseDouble(this.n.calculer1()));
+		return  Double.toString(tt) ;
+	
+	}
+
+	@Override
 	public double calculer() {
-		return Math.pow(this.x.calculer(),this.n.calculer());
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	

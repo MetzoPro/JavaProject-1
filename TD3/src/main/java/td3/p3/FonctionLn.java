@@ -5,17 +5,18 @@ public class FonctionLn implements ExpressionSymbolique{
 	private VariablesSymbolique x;
 	
 	public FonctionLn( VariablesSymbolique x ) {
-		this.x = x ;
+		this.x = x ;	
+	}
+	@Override
+	public String calculer1() {
+       
+		double tt=  Math.log(Double.parseDouble(this.x.calculer1()));
+		return  Double.toString(tt) ;
 		
 	}
-	@Override
-	public double calculer() {
-
-		return Math.log(this.x.calculer());
-	}
 
 	@Override
-	public ExpressionSymbolique simplifier() {
+	public ExpressionSymbolique simplifie() {
 		return null;
 	}
 
@@ -23,6 +24,11 @@ public class FonctionLn implements ExpressionSymbolique{
 	public String afficher() {
 		
 		 return "Cos("+this.x.afficher()+")";
+	}
+	@Override
+	public double calculer() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 
